@@ -32,16 +32,18 @@
         <div class="container1">
             <nav>
                 <h1 class="brand"><a href="index.html">Yu<span>m</span>e</a></h1>
-                <ul>
+                <ul style="color: white;">
                     <li><a href="#" id="home">Home</a></li>
-                    <li><a href="#aboutme">About</a></li>
-                    <li><a href="#2">Projects</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Skill</a></li>
+                    <li><a class="link1" >About</a></li>
+                    <li><a class="link2">Projects</a></li>
+                    <li><a class="link3">Services</a></li>
+                    <li><a class="link4">Skill</a></li>
                 </ul>
                 </nav>
             
             </div>
+                
+                
             
 <!-- Navbar -->
         <section>    
@@ -58,7 +60,7 @@
         
             <!-- about me -->
             
-        <div class="row profile section sectionfissa m-0"  >
+        <div class="row profile section sectionfissa m-0" data-div-name="#second" >
             <div class="max-width">
                 <br>
                   <h1 style="color: white">About me</h1> </div> 
@@ -92,7 +94,7 @@
             
             <!-- projets -->
             
-            <div class="project1 section sectionfissa m-0" id="2"> 
+            <div class="project1 section sectionfissa m-0" data-div-name="#third"> 
             <div class="max-width">
                 <br>
             <h1>Projects</h1>
@@ -113,7 +115,7 @@
             
             <!-- service -->
             
-        <div class="service1 section sectionfissa m-0">
+        <div class="service1 section sectionfissa m-0" data-div-name="#fourth">
             
             <div class="max-width">
                 <br>
@@ -148,7 +150,7 @@
             
         <!-- skill -->
             
-            <div class="skills section sectionfissa m-0">
+            <div class="skills section sectionfissa m-0" data-div-name="#fifth">
                 
                 <div class="wrapper">
         <div class="container3">
@@ -232,62 +234,72 @@
             </div>
             
                      <!-- footer -->
-            <div class="footer01 section  m-0">
+            <div class="footer01 section  m-0" >
             <footer class="footer-distributed">
  
  <div class="footer-left">
  
- <h3>WebDev<span>Trick</span></h3>
+ <h3 style="font-family: Pixel_NES;">My<span>Portfolio</span></h3>
  
- <p class="footer-links">
- <a href="#">Home</a>
+ <p class="footer-links" style="font-family: Pixel_NES;">
+ <a class="link5" >Home</a>
  ·
- <a href="#">Blog</a>
+ <a class="link6" >About</a>
  ·
- <a href="#">Pricing</a>
+ <a class="link7">Projects</a>
  ·
- <a href="#">About</a>
+ <a class="link8" >Service</a>
  ·
- <a href="#">Faq</a>
- ·
- <a href="#">Contact</a>
- </p>
+ <a class="link9">Skills</a>
  
- <p class="footer-company-name">webdevtrick &copy; 2019</p>
  </div>
  
  <div class="footer-center">
  
  <div>
  <i class="fa fa-map-marker"></i>
- <p><span>21 Revolution Street</span> Delhi, India</p>
+ <p style="font-family: Pixel_NES;"><span>via degli aceri 15/I</span> Molise, Italia</p>
  </div>
  
  <div>
  <i class="fa fa-phone"></i>
- <p>+1 555 123456</p>
+ <p style="font-family: Pixel_NES;">+39 3349210729</p>
  </div>
  
  <div>
  <i class="fa fa-envelope"></i>
- <p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+ <p><a href="mailto:mattiu.mc@gmail.com" style="font-family: Pixel_NES;">mattiu.mc@gmail.com</a></p>
  </div>
  
  </div>
  
- <div class="footer-right">
+ <div class="footer-right" >
  
- <p class="footer01 footer-company-about section ">
- <span>About the company</span>
- Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+ <p class="footer01 footer-company-about section " style="font-family: Pixel_NES;">
+ <span>About me</span>
+ I am a junior web designers,web developers &amp; database developers.
  </p>
  
  <div class="footer-icons">
  
- <a href="#"><i class="fa fa-facebook"></i></a>
- <a href="#"><i class="fa fa-twitter"></i></a>
- <a href="#"><i class="fa fa-linkedin"></i></a>
- <a href="#"><i class="fa fa-github"></i></a>
+ <div class="social text-center" >
+                
+                    
+                    <!-- facebook -->
+                <i class="nes-icon facebook is-medium"></i>
+                    <!-- instagram -->
+                <i class="nes-icon instagram is-medium"></i>
+                
+                    <!-- github -->
+                <i class="nes-icon github is-medium"></i>
+                    <!-- gmail -->
+                <i class="nes-icon gmail is-medium"></i>
+                    <!-- whatsapp -->
+                <i class="nes-icon whatsapp is-medium"></i>
+
+            
+            
+            </div>
  
  </div>
  
@@ -327,17 +339,60 @@
             
             $(function() {
           $.scrollify({
-            section : ".section",
-            scrollSpeed: 500,
-              interstitialSection : ".footer01",
+                section : ".section",
+                scrollSpeed: 500,
+                interstitialSection : ".footer01",
+                offset : 0,
+                scrollbars: true,
+                setHeights: true,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:true,
           });
+                $('.link1').click(function(){
+                $.scrollify.next();
+                            
+                });
+                $('.link2').click(function(){
+	            $.scrollify.move("#3");
+                });
+                $('.link3').click(function(){
+                    $.scrollify.move("#4");
+                });
+                $('.link4').click(function(){
+                    $.scrollify.move("#5");
+                });
+                
+                /* footer */
+                
+                $('.link5').click(function(){
+	            $.scrollify.move("#1");
+                });
+                $('.link6').click(function(){
+                    $.scrollify.move("#2");
+                });
+                $('.link7').click(function(){
+                    $.scrollify.move("#3");
+                });
+                
+                $('.link8').click(function(){
+	            $.scrollify.move("#4");
+                });
+                $('.link9').click(function(){
+                    $.scrollify.move("#5");
+                });
+                
+
         });
             
         </script>
         
         <script>
             
-         
+         $(".first").click(function(e) {
+          e.preventDefault();
+          $.scrollify.move($(div).attr("href"));
+       });
             
         </script>
         
