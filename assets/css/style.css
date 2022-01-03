@@ -67,17 +67,6 @@ header{
 	margin: 0 auto;
 }
 
-.menu-toggle{
-	position: fixed;
-	top: 2.5rem;
-	right: 2.5rem;
-	color: #eeeeee;
-	font-size: 3rem;
-	cursor: pointer;
-	z-index: 1000;
-	display: none;
-}
-
 nav{
 	padding-top: 5rem;
 	display: flex;
@@ -86,6 +75,19 @@ nav{
 	text-transform: uppercase;
 	font-size: 1.6rem;
 }
+    
+.menu-toggle{
+        position: fixed;
+        top: 2.5rem;
+        right: 2.5rem;
+        color: #eeeeee;
+        font-size: 3rem;
+        cursor: pointer;
+        z-index: 1000;
+        display: none;
+}
+
+
 
 .brand{
 	font-size: 3rem;
@@ -175,6 +177,16 @@ nav ul li a:hover::after{
 	transform: scaleX(1);
 }
 
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+
 .fa .fas {
     font-weight: 900;
 }
@@ -192,14 +204,6 @@ nav ul li a:hover::after{
     content: "\f00d";
 }
 
-@keyframes slideIn {
-	from{
-
-	}
-	to{
-		transform: translateX(0);
-	}
-}
 
 
 /* end navbar */
@@ -677,7 +681,7 @@ footer{
  width: 35px;
  height: 35px;
  cursor: pointer;
- background-color:  #33383b;
+ 
  border-radius: 2px;
  
  font-size: 20px;
@@ -689,30 +693,6 @@ footer{
  margin-bottom: 5px;
 }
  
- 
-@media (max-width: 880px) {
- 
- .footer-distributed{
- font: bold 14px sans-serif;
- 
- }
- 
- .footer-distributed .footer-left,
- .footer-distributed .footer-center,
- .footer-distributed .footer-right{
- display: block;
- width: 100%;
- margin-bottom: 40px;
- text-align: center;
- }
- 
- .footer-distributed .footer-center i{
- margin-left: 0;
- }
- .main {
- line-height: normal;
- font-size: auto;
- }
  
 }
 
@@ -731,6 +711,8 @@ footer{
     .content1{
     margin-top: 16%;
     }
+    
+      
 }
 
 
@@ -745,13 +727,40 @@ footer{
     
     .descrition, .image-profile {
     width: 100%;
+}
+    .descrition {
+        padding-left: 20%;
+        text-align: center;
+        padding-right: 29%;
+    }
     
+    .image-profile img {
+    padding-left: 36%;
+        
 }
+    .project1 .card {
+    margin-top: 5%!important;
+    padding: 48px 8px;
+    width: calc(38% - 0px);
+}
+    
+    
+    .content2{
+        justify-content: space-around;
+        align-content: center;
+    }
+    .service1 .max-width h1{
+        margin-bottom: -14px;
+    }
+    
+    .profile .max-width h1{
+        margin-bottom: 30px;
+    }
 }
 
 
 
-
+/* in progress */
         
 /* phone */
 
@@ -769,20 +778,57 @@ footer{
     
     .content1 {
             margin-top: 81%;
-    } 
+            font-size: 0.7em;
+    }
     
     .descrition {
-
+        font-size: 0.6em;
+        padding-right: 40px;
+}
+   
+    
+    .max-width h1{
+        font-size: 3em;
+    }
+    
+    .profile .max-width h1 {
+        margin-bottom: 40px;
+    }
+    
+    .project1 .max-width h1 {
+        margin-bottom: 90px;
+    }
+    
+    .project1 .card{
+        width: calc(100% - 6px);
+        margin-bottom: 20px;
+    }
+    
+    .content2{
+    display: flex;
+    flex-flow: column wrap;
+}
+    .content2 .card{
+        width: calc(100% - 6px);
+        margin-bottom: 20px;
+    }
+        
 }
 
-}
-
+/* menu */
 
 @media screen and (max-width: 700px){
 
-	.menu-toggle{
+   header .menu-toggle{
 		display: block;
 	}
+    
+    .row>*{
+    width: initial;
+}
+    .mn1{
+        color: white!important;
+    }
 
 	nav{
 		padding-top: 0;
@@ -817,12 +863,10 @@ footer{
 	  transform: scale(1);
 	  opacity: 1;
   }
-    
-    .card{
-        width: 100%;
-    }
   
 }
+
+/* footer */
 
 @media screen and (max-width: 1190px) {
     .max-width{
@@ -832,5 +876,40 @@ footer{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+}
+
+@media (max-width: 880px) {
+ 
+ .footer-distributed{
+ font: bold 14px sans-serif;
+ 
+ }
+    
+    .footer-distributed .footer-left,
+ .footer-distributed .footer-center,
+ .footer-distributed .footer-right{
+ display: block;
+ width: 100%;
+ margin-bottom: 40px;
+ text-align: center;
+ }
+ 
+ .footer-distributed .footer-center i{
+ margin-left: 0;
+ }
+ .main {
+ line-height: normal;
+ font-size: auto;
+ }
+ 
+}
+    
+}
+
+@media (min-width: 768px){
+    .soc {
+        margin-left: 25%!important;
+    }
+    
 }
 

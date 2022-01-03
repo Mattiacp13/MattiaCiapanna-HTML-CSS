@@ -24,9 +24,8 @@
             
                 
             
-       <!-----> <div class="menu-toggle" id="hamburger">
-            <i class="fas fa-bars">
-            </i>
+       <!-----> <div class="menu-toggle" id="hamburger" disabled>
+            <i class="mn1 fa fa-bars"></i>
         </div>
         <div class="overlay"></div>
         <div class="container1">
@@ -72,18 +71,20 @@
             <div class="image-profile col-md-6">
                 <img src="assets/img/profile.png">
             </div>
-            <div class="col-md-6 social text-center">
+            <div class="col-md-6 social text-center soc">
                 
                     
                     <!-- facebook -->
-                <i class="nes-icon facebook is-large"></i>
+                <a href="https://www.facebook.com/mattia.ciap/"><i class="nes-icon facebook is-large"></i></a>
                     <!-- instagram -->
                 <a href="https://www.instagram.com/mattia_ciapanna13/"><i class="nes-icon instagram is-large"></i></a>
                 
                     <!-- github -->
                 <a href="https://github.com/Mattiacp13/MattiaCiapanna-HTML-CSS.git"><i class="nes-icon github is-large"></i></a>
+                
                     <!-- gmail -->
-                <i class="nes-icon gmail is-large"></i>
+                <a href="mailto:mattiu.mc@gmail.com" style="font-family: Pixel_NES;"><i class="nes-icon gmail is-large"></i></a>
+                
                     <!-- whatsapp -->
                 <i class="nes-icon whatsapp is-large"></i>
 
@@ -115,7 +116,7 @@
             
             <!-- service -->
             
-        <div class="service1 section sectionfissa m-0" data-div-name="#fourth">
+        <div class="service1 section sectionfissa m-0" data-div-name="#fourth" data-section-name="service01">
             
             <div class="max-width">
                 <br>
@@ -125,7 +126,7 @@
                     <div class="box">
                         <i class="fa fa-code"></i>
                         <h3>Web Development</h3>
-                        <p>HTML, CSS, javascript, PHP, </p>
+                        <p>HTML, CSS, javascript, PHP, </p><br><br>
                     </div>
                 </div>
                 <div class="card">
@@ -137,7 +138,7 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fa fa-database"></i>
+                        <i class="fa fa-database cr2"></i>
                         <h3>Database Development</h3>
                         <p>fair knowledge of SQL, knowing how to prepare data</p>
                     </div>
@@ -220,26 +221,16 @@
             </div>
         </div>
     </div>
-                
-                <!-- skill professional -->
-                <!--
-                <ul class="progress">-->
-    <!--  Item  -->
-   <!-- <li data-name="SVG Skill" data-percent="13%">
-        <svg viewBox="-10 -10 220 220">
-        <g fill="none" stroke-width="3" transform="translate(100,100)">
-        <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)"/>
-        <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50" stroke="url(#cl2)"/>
-              -->      
+                 
             </div>
             
                      <!-- footer -->
             <div class="footer01 section  m-0" >
             <footer class="footer-distributed">
  
- <div class="footer-left">
+ <div class="footer-left ">
  
- <h3 style="font-family: Pixel_NES;">My<span>Portfolio</span></h3>
+ <h3 class="col-md-" style="font-family: Pixel_NES;">My<span>Portfolio</span></h3>
  
  <p class="footer-links" style="font-family: Pixel_NES;">
  <a class="link5" >Home</a>
@@ -262,7 +253,7 @@
  </div>
  
  <div>
- <i class="fa fa-phone"></i>
+ <i class="menu fa fa-phone"></i>
  <p style="font-family: Pixel_NES;">+39 3349210729</p>
  </div>
  
@@ -286,16 +277,13 @@
                 
                     
                     <!-- facebook -->
-                <i class="nes-icon facebook is-medium"></i>
+                <i class="nes-icon facebook is-medium"><a href="https://www.facebook.com/mattia.ciap/"></a></i>
                     <!-- instagram -->
-                <i class="nes-icon instagram is-medium"></i>
+                <i class="nes-icon instagram is-medium"><a href="https://www.instagram.com/mattia_ciapanna13/"></a></i>
                 
                     <!-- github -->
-                <i class="nes-icon github is-medium"></i>
-                    <!-- gmail -->
-                <i class="nes-icon gmail is-medium"></i>
-                    <!-- whatsapp -->
-                <i class="nes-icon whatsapp is-medium"></i>
+                <i class="nes-icon github is-medium"><a href="https://github.com/Mattiacp13/MattiaCiapanna-HTML-CSS.git"></a></i>
+                    
 
             
             
@@ -349,6 +337,9 @@
                 updateHash: true,
                 touchScroll:true,
           });
+                
+                 
+                
                 $('.link1').click(function(){
                 $.scrollify.next();
                             
@@ -381,6 +372,8 @@
                 $('.link9').click(function(){
                     $.scrollify.move("#5");
                 });
+                
+
                 
 
         });
