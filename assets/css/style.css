@@ -15,6 +15,10 @@ html, body{
 	font-family: Pixel_NES;
 }
 
+.row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 ::-webkit-scrollbar-track
 {
@@ -24,7 +28,7 @@ html, body{
 
 ::-webkit-scrollbar
 {
-	width: 10px;
+	width: 5px;
 	background-color: #F5F5F5;
 }
 
@@ -49,6 +53,8 @@ a, a:hover{
     height: 100vh!important;
 }
 
+
+/* home page */
 
 header{
     
@@ -124,6 +130,10 @@ nav ul li:nth-child(3){
 
 nav ul li:nth-child(4){
 	animation-delay: 1.5s;
+}
+
+nav ul li:nth-child(5){
+	animation-delay: 2s;
 }
 
 nav ul li a{
@@ -232,17 +242,37 @@ nav ul li a:hover::after{
 
 /*profile*/
 
+video #bgvideo {
+    z-index: -1;
+}
+video #bgvideo .row>*{
+    padding-left: 0;
+    padding-right: 0;}
+
 .profile {
-     display: flex;
+     /*display: flex;*/
     border-color: -moz-linear-gradient(top, #555555, #111111);
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url('../img/pacman.gif') center no-repeat;
+	/*background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url('../img/pacman.mp4') center no-repeat;*/
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
     
+}
+
+.profile-txt {
+    display: flex;
+    border-color: -moz-linear-gradient(top, #555555, #111111);
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5));
 	background-size: cover;
 	position: relative;
   overflow: hidden;
 }
+
+.profile-txt h1{font-size: 40px}
 
 .descrition, .image-profile {
     width: 50%;
@@ -760,7 +790,8 @@ footer{
 
 
 
-/* in progress */
+/* phone project in progress */
+/* wait for future updates */
         
 /* phone */
 
@@ -857,8 +888,9 @@ footer{
 		font-size: 5rem;
 	}
   
-  .overlay.menu-open,
-  nav.menu-open{
+    .overlay.menu-open{
+      position: fixed;}
+  .overlay.menu-open, nav.menu-open{
 	  display: flex;
 	  transform: scale(1);
 	  opacity: 1;
@@ -875,6 +907,17 @@ footer{
     .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
+    }
+    
+    .logo1{
+        padding-left: 40%;
+    }
+}
+
+@media screen and (min-width: 1190px) {
+    
+    .logo1{
+        padding-left: 32%;
     }
 }
 
@@ -909,6 +952,10 @@ footer{
 @media (min-width: 768px){
     .soc {
         margin-left: 25%!important;
+    }
+    
+    .col-md-6 {
+        width: initial;
     }
     
 }
